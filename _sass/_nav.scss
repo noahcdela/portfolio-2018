@@ -1,0 +1,43 @@
+// Navigation
+
+nav {
+    border-bottom: 2px solid $color_main;
+    padding-top: 30px;
+    @include for-phone-only {
+        padding-top: 15px;
+        font-size: 12px;
+    }
+    @include for-big-desktop-up {
+        padding-top: 60px;
+    } 
+    ul {
+        list-style: none;
+        display: grid;
+        display: -ms-grid;
+        display: -ms-inline-grid;
+        grid-template-columns: auto 1fr auto auto;
+        grid-template-rows: auto;
+        grid-gap: 30px;
+        margin: 0;
+        padding: 0;
+        // @include for-phone-only {
+        //     grid-gap: 15px;
+        // }
+    }
+    li:nth-child(2) {
+        grid-column-start: 3;
+    }
+    li .active {
+        border-bottom: 2px solid $color_main;
+    }
+    a {
+        display: block;
+        text-decoration: none;
+        padding: 1em 0 .5em 0;
+        border-bottom: 2px solid transparent;
+        &:hover {
+            border-bottom: 2px solid $color_main;
+            color: $color_main;
+        }
+    }
+}

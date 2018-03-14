@@ -1,0 +1,93 @@
+--- 
+layout: default
+---
+
+<div class="wrapper">
+
+  <h1>{{ page.title}}</h1>
+
+  <div class="project__details">
+    <p class="project__details__scope">
+      {{ page.scope | array_to_sentence_string }}
+    </p>
+
+    <div class="project__details__description">
+      <p class="">
+        {{ page.description }}
+      </p>
+
+      {% if page.link %}
+      <p>
+        <a class="cta cta--project" target="_blank" href="{{ page.link }}">Visit the Site ➝</a>
+      </p>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+  {{ content }}
+
+  <hr class="project__end__divider">
+
+</div>
+
+{% capture the_collection %}{{page.collection}}{% endcapture %}
+  {% if page.collection %}
+    {% assign  document = site[the_collection]  %}
+  {% endif %}
+
+{% for links in document  %}
+  {% if links.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prevurl = prev.url %}
+      {% assign prevtitle = prev.title %}
+      {% assign prevprofile = prev.profile %} 
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = document[forloop.index] %}
+      {% assign nexturl = next.url %}
+      {% assign nexttitle = next.title %}
+      {% assign nextprofile = next.profile %} 
+    {% endunless %}
+  {% endif %}
+  {% assign prev = links %}
+{% endfor %}
+
+<div class="wrapper wrapper--next__previous">
+
+  <div class="project__card--previous">
+    {% if prevurl %}
+      <a href="{{prevurl}}" class="project__card">
+          <div class="project__card__info">
+              <h2>Previous Project</h2>
+              <p>{{ prevtitle }}</p>
+          </div>
+          <img class="project__card__image" src="/assets/images/{{ prevprofile }}" alt="">
+      </a>
+    {% endif %}
+  </div>
+
+  <div class="project__card--next">
+    {% if nexturl %}
+    <a href="{{nexturl}}" class="project__card">
+        <div class="project__card__info">
+            <h2>Next Project</h2>
+            <p>{{ nexttitle }}</p>
+        </div>
+        <img class="project__card__image" src="/assets/images/{{ nextprofile }}" alt="">
+    </a>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  document.body.onkeyup = function (e) {
+    if (e.keyCode == '37') {
+      window.location = '{{prevurl}}';
+    }
+    if (e.keyCode == '39') {
+      window.location = '{{nexturl}}';
+    }
+  };
+</script>

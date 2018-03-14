@@ -1,0 +1,58 @@
+# Site settings
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Noah Delagardelle
+
+description: >-
+  Hello, I’m a graphic designer and front-end developer from Wisconsin. I am passionate about creating meaningful digital experiences through design. 
+colophon: >-
+  This site was crafted using HTML, Sass, and Javascript with some help from jQuery. Jekyll was used for static site generation. Additionally, Git is used for version control, and GitHub Pages is leveraged for deployment and hosting.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+dribbble: https://dribbble.com/noahdelagardelle
+github: https://github.com/Noahdelagardelle
+codepen: https://codepen.io/NoahDelagardelle/
+behance: https://www.behance.net/noahcdela
+tumblr: https://noahdelagardelle.tumblr.com/
+instagram: https://www.instagram.com/noahdelagardelle/
+linkedin: https://www.linkedin.com/in/noahdelagardelle/
+spotify: https://open.spotify.com/user/noahcdela?si=0PQcQ_WnQNqK-mGQFfTOPQ
+email: noahcdela@gmail.com
+
+collections:
+  projects:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Build settings
+highlighter: true
+markdown: kramdown
+permalink: pretty
+
+sass:
+  sass_dir: _sass
+  style: expanded # possible values: nested expanded compact compressed
+
+host: 0.0.0.0
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
