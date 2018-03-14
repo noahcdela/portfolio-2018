@@ -58,24 +58,24 @@ layout: default
 
   <div class="project__card--previous">
     {% if prevurl %}
-      <a href="{{prevurl}}" class="project__card">
+      <a href="{{ site.baseurl }}{{prevurl}}" class="project__card">
           <div class="project__card__info">
               <h2>Previous Project</h2>
               <p>{{ prevtitle }}</p>
           </div>
-          <img class="project__card__image" src="/assets/images/{{ prevprofile }}" alt="">
+          <img class="project__card__image" src="{{ site.baseurl }}/assets/images/{{ prevprofile }}" alt="">
       </a>
     {% endif %}
   </div>
 
   <div class="project__card--next">
     {% if nexturl %}
-    <a href="{{nexturl}}" class="project__card">
+    <a href="{{ site.baseurl }}{{nexturl}}" class="project__card">
         <div class="project__card__info">
             <h2>Next Project</h2>
             <p>{{ nexttitle }}</p>
         </div>
-        <img class="project__card__image" src="/assets/images/{{ nextprofile }}" alt="">
+        <img class="project__card__image" src="{{ site.baseurl }}/assets/images/{{ nextprofile }}" alt="">
     </a>
     {% endif %}
   </div>
@@ -84,10 +84,10 @@ layout: default
 <script>
   document.body.onkeyup = function (e) {
     if (e.keyCode == '37') {
-      window.location = '{{prevurl}}';
+      window.location = '{{ site.baseurl }}{{prevurl}}';
     }
     if (e.keyCode == '39') {
-      window.location = '{{nexturl}}';
+      window.location = '{{ site.baseurl }}{{nexturl}}';
     }
   };
 </script>

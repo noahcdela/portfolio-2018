@@ -17,7 +17,7 @@ permalink: /projects
                     {{ project.scope | array_to_sentence_string }}
                 </p>
             </div>
-            <img class="project__card__image" src="/assets/images/{{ project.profile }}" alt="">
+            <img class="project__card__image" src="{{ site.baseurl }}/assets/images/{{ project.profile }}" alt="">
         </a>
         {% endfor %} 
 
