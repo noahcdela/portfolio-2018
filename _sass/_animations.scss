@@ -1,1 +1,26 @@
 // Animations
+
+// main {
+//     animation: fadeIn 250ms ease 500ms;
+// }
+
+// @keyframes fadeIn {
+//     0% {
+//         opacity: 1;
+//     }
+//     100% {
+//         opacity: 0;
+//     }
+// }
+
+main {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 900ms ease;
+    transition-delay: 100ms;
+    &.fade--in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: none;
+    }
+}

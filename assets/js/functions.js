@@ -22,6 +22,8 @@ $(function () {
         event.preventDefault();
     });
 
+    $('main').removeClass('fade--in');
+
 
 
 });

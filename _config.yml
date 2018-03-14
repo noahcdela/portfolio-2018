@@ -5,8 +5,8 @@ description: >-
   Hello, I’m a graphic designer and front-end developer from Wisconsin. I am passionate about creating meaningful digital experiences through design. 
 colophon: >-
   This site was crafted using HTML, Sass, and Javascript with some help from jQuery. Jekyll was used for static site generation. Additionally, Git is used for version control, and GitHub Pages is leveraged for deployment and hosting.
-baseurl: "/portfolio-2018" # the subpath of your site, e.g. /blog
-url: "https://noahdelagardelle.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.noahd.me/" # the base hostname & protocol for your site, e.g. http://example.com
 
 dribbble: https://dribbble.com/noahdelagardelle
 github: https://github.com/Noahdelagardelle
