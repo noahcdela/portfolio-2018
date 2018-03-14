@@ -4,6 +4,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Noah Delagardelle
+author: Noah Delagardelle
 
 description: >-
   Hello, I’m a graphic designer and front-end developer from Wisconsin. I am passionate about creating meaningful digital experiences through design. 
