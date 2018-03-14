@@ -11,7 +11,7 @@ description: >-
 colophon: >-
   This site was crafted using HTML, Sass, and Javascript with some help from jQuery. Jekyll was used for static site generation. Additionally, Git is used for version control, and GitHub Pages is leveraged for deployment and hosting.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://noahdelagardelle.github.io/portfolio-2018/" # the base hostname & protocol for your site, e.g. http://example.com
 
 dribbble: https://dribbble.com/noahdelagardelle
 github: https://github.com/Noahdelagardelle
