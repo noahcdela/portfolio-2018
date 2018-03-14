@@ -10,7 +10,7 @@ permalink: /projects
     <div class="project__grid">
 
         {% for project in site.projects %}
-        <a href="{{ project.permalink }}" class="project__card">
+        <a href="{{ site.baseurl }}{{ project.permalink }}" class="project__card">
             <div class="project__card__info">
                 <h2>{{ project.title }}</h2>
                 <p>
