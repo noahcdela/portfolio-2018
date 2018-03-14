@@ -35,7 +35,7 @@ defaults:
       layout: "project"
 
 # Build settings
-highlighter: true
+highlighter: rouge
 markdown: kramdown
 permalink: pretty
 
