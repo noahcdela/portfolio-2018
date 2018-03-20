@@ -6,6 +6,7 @@ html, body {
 }
 
 body {
+    position: relative;
     // transition: 800ms ease;
     // &.dark-bg {
     //     background-color: black;
@@ -31,6 +32,15 @@ body {
     }
     margin: 0 auto;
     &--hero {
+        //height: 100vh;
+        // position: absolute;
+        // top: 0;
+        // right: 10vh;
+        // bottom: 0;
+        // left: 10vh;
+        // background-color: indianred;
+        
+
         margin-top: 60px;
         margin-bottom: 60px;
         @include for-big-desktop-up {
@@ -92,11 +102,15 @@ body {
 .cta {
     display: inline-block;
     text-decoration: none;
-    padding-top: 6px;
     padding-bottom: 6px;
     border-bottom: 2px solid $color_secondary;
     transition: 250ms ease;
     &--hero {
+
+        // position: absolute;
+        //left: 10vw;
+        //bottom: 60px;
+
         margin-top: 20px;
         margin-bottom: 20px;
         @include for-big-desktop-up {
@@ -105,7 +119,7 @@ body {
         }
     }
     &--project {
-        // display: block;
+        //margin-top: 30px;
     }
     &:hover {
 
@@ -113,13 +127,17 @@ body {
 }
 
 .about__wrapper {
-    margin-bottom: 100px;
+    p {
+        opacity: .7;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    a {
+        border-bottom: 2px solid $color_secondary;
+    }
     @include for-phone-only {
         display: flex;
         flex-direction: column-reverse;
-        .me {
-            // display: none;
-        }
     }
     @include for-tablet-portrait-up {
         display: grid;

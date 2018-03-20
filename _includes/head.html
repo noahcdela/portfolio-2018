@@ -2,7 +2,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <title>
     {% if page.title != null %}
       {{ page.title | escape }} &#8226; {{ site.title | escape }}
@@ -10,7 +9,6 @@
       {{ site.title | escape }}
     {% endif %}
   </title>
-
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} {% else %}{{ site.title | escape }}{% endif %}" />
@@ -19,13 +17,9 @@
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="{{ "/assets/images/me.jpg" | relative_url }}"/>
   <meta name="author" content="{{ site.author | escape }}" />
-
-  <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> -->
-
+  <link rel="icon" type="image/png" href="{{ "assets/images/favicon-16x16.png" | relative_url }}" sizes="16x16">  
+  <link rel="icon" type="image/png" href="{{ "assets/images/favicon-32x32.png" | relative_url }}" sizes="32x32">  
+  <link rel="icon" type="image/png" href="{{ "assets/images/favicon-96x96.png" | relative_url }}" sizes="96x96">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-  <!-- <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}"> -->
-
 </head>

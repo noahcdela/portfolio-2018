@@ -1,7 +1,5 @@
 $(function () {
 
-    console.log('js is hooked up');
-
     $('.project__card').hover(
         function () {
             $(this).children('.project__card__info').children('h2, p').addClass('info--reveal');
@@ -23,7 +21,5 @@ $(function () {
     });
 
     $('main').removeClass('fade--in');
-
-
 
 });

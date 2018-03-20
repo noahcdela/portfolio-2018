@@ -28,6 +28,12 @@ layout: default
 
   {{ content }}
 
+  {% if page.link %}
+  <p class="project__text">
+      <a class="cta cta--project" target="_blank" href="{{ page.link }}">Visit the Site ➝</a>
+  </p>
+  {% endif %}
+
   <hr class="project__end__divider">
 
 </div>
