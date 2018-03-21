@@ -155,13 +155,13 @@
     }
 }
 
-.project__end__divider {
+.project__end__divider {                  
     height: 2px;
     width: 100%;
     border: none;
     background-color: $color_main;
     margin: 60px 0;
-    opacity: .5;
+    opacity: .2;
 }
 
 .side-by-side__wrapper {
@@ -169,10 +169,15 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
     margin-bottom: 30px;
+    .side-by-side-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     p {
-        opacity: .5;
+        //opacity: .5;
         margin: 0;
-        width: 100%;
+        width: 75%;
         justify-content: start;
         @include for-phone-only {
             width: 90%;
