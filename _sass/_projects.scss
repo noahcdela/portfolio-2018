@@ -103,6 +103,10 @@
     }
 }
 
+.wrapper--next__previous {
+    margin-top: 100px;
+}
+
 .project__card--next,
 .project__card--previous {
     width: 100%;
@@ -120,15 +124,31 @@
 .project__card--next .project__card {
     position: relative;
     overflow: visible;
-    @include for-phone-only {
-        &::before {
-            content: 'Next Project';
-            display: block;
-            position: absolute;
-            top: -30px;
+    &::before {
+        content: 'Next Project →';
+        display: block;
+        position: absolute;
+        top: -50px;
+        right: 0;
+        // opacity: .5;
+        font-size: 24px;
+        @include for-phone-only {
             left: 0;
-            opacity: .5;
         }
+    }
+}
+
+.project__card--previous .project__card { 
+    position: relative;
+    overflow: visible;
+    &::before {
+        content: '← Previous Project';
+        display: block;
+        position: absolute;
+        top: -50px;
+        left: 0;
+        // opacity: .5;
+        font-size: 24px;
     }
 }
 

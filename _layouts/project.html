@@ -18,7 +18,7 @@ layout: default
 
       {% if page.link %}
       <p>
-        <a class="cta cta--project" target="_blank" href="{{ page.link }}">Visit the Site ➝</a>
+        <a class="cta cta--project" target="_blank" href="{{ page.link }}">Visit the Site →</a>
       </p>
       {% endif %}
 
@@ -30,7 +30,7 @@ layout: default
 
   {% if page.link %}
   <p class="project__text">
-      <a class="cta cta--project" target="_blank" href="{{ page.link }}">Visit the Site ➝</a>
+      <a class="cta cta--project" target="_blank" href="{{ page.link }}">Visit the Site →</a>
   </p>
   {% endif %}
 
@@ -48,13 +48,15 @@ layout: default
     {% unless forloop.first %}
       {% assign prevurl = prev.url %}
       {% assign prevtitle = prev.title %}
-      {% assign prevprofile = prev.profile %} 
+      {% assign prevprofile = prev.profile %}
+      {% assign prevscope = prev.scope | array_to_sentence_string %}  
     {% endunless %}
     {% unless forloop.last %}
       {% assign next = document[forloop.index] %}
       {% assign nexturl = next.url %}
       {% assign nexttitle = next.title %}
       {% assign nextprofile = next.profile %} 
+      {% assign nextscope = next.scope | array_to_sentence_string %} 
     {% endunless %}
   {% endif %}
   {% assign prev = links %}
@@ -66,8 +68,8 @@ layout: default
     {% if prevurl %}
       <a href="{{ site.baseurl }}{{prevurl}}" class="project__card">
           <div class="project__card__info">
-              <h2>Previous Project</h2>
-              <p>{{ prevtitle }}</p>
+              <h2>{{ prevtitle }}</h2>
+              <p>{{ nextscope }}</p>
           </div>
           <img class="project__card__image" src="{{ site.baseurl }}/assets/images/{{ prevprofile }}" alt="">
       </a>
@@ -78,8 +80,8 @@ layout: default
     {% if nexturl %}
     <a href="{{ site.baseurl }}{{nexturl}}" class="project__card">
         <div class="project__card__info">
-            <h2>Next Project</h2>
-            <p>{{ nexttitle }}</p>
+            <h2>{{ nexttitle }}</h2>
+            <p>{{ nextscope }}</p>
         </div>
         <img class="project__card__image" src="{{ site.baseurl }}/assets/images/{{ nextprofile }}" alt="">
     </a>

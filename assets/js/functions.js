@@ -22,4 +22,8 @@ $(function () {
 
     $('main').removeClass('fade--in');
 
+    setTimeout(function() {
+        $('.project__grid--hero').removeClass('fade--in');
+    }, 900);
+
 });

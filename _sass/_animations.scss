@@ -13,7 +13,8 @@
 //     }
 // }
 
-main {
+main,
+.project__grid--hero {
     opacity: 1;
     transform: translateY(0);
     transition: 900ms ease;
